@@ -78,22 +78,92 @@ a {
 }
 
 .site-header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 20;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--space-md);
 
-  padding: 1.25rem;
+  padding: var(--space-sm) var(--space-md);
 
+  background-color: var(--white);
   border-bottom: 1px solid var(--light-gray);
 }
 
 .logo {
   color: var(--blue);
 
+  font-family: var(--font-display);
   font-size: 1.75rem;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+/* Search */
+
+.site-search {
+  display: flex;
+  align-items: center;
+}
+
+.site-search-input {
+  width: 0;
+  padding: 0.5rem var(--space-xs);
+
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  background-color: transparent;
+
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: width 0.25s ease, opacity 0.25s ease;
+}
+
+.site-search.is-open .site-search-input {
+  width: min(14rem, 45vw);
+  margin-right: var(--space-xs);
+
+  border-color: var(--light-gray);
+  background-color: var(--off-white);
+
+  opacity: 1;
+  visibility: visible;
+}
+
+.site-search-input:focus {
+  outline: 2px solid var(--blue);
+  outline-offset: 1px;
+}
+
+.search-toggle {
+  display: grid;
+  place-items: center;
+
+  padding: 0.5rem;
+
+  background: none;
+  border: 0;
+  border-radius: var(--radius-pill);
+
+  color: var(--black);
+  cursor: pointer;
+}
+
+.search-toggle:hover {
+  background-color: var(--light-gray);
 }
 
 .menu-toggle {
@@ -305,4 +375,45 @@ a {
   color: var(--gray);
 
   font-size: 0.875rem;
+}
+
+/* Desktop */
+
+@media (min-width: 48rem) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-nav {
+    position: static;
+
+    display: block;
+
+    width: auto;
+    padding: 0;
+
+    background-color: transparent;
+    border-bottom: 0;
+  }
+
+  .main-nav ul {
+    display: flex;
+    gap: var(--space-lg);
+  }
+
+  .main-nav li + li {
+    margin-top: 0;
+  }
+
+  .main-nav a {
+    font-family: var(--font-display);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .main-nav a:hover {
+    color: var(--blue);
+  }
 }
