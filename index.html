@@ -7,21 +7,83 @@
     <link rel="stylesheet" href="/styles/styles.css">
 </head>
 <body>
+    <!-- Navigation with a hamburger menu -->
     <header class="site-header">
-    <a href="#" class="logo">HvanA</a>
+  <a href="index.html" class="logo">HvanA</a>
 
-    <nav class="main-nav">
-      <ul>
-        <li><a href="#">Nieuws</a></li>
-        <li><a href="#">Video</a></li>
-        <li><a href="#">Columns</a></li>
-        <li><a href="#">Opinie</a></li>
-        <li><a href="#">Podcasts</a></li>
-      </ul>
-    </nav>
-  </header>
+  <button class="menu-toggle" type="button" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
-        
-    
+  <nav class="main-nav">
+    <ul>
+      <li><a href="#">Nieuws</a></li>
+      <li><a href="#">Video</a></li>
+      <li><a href="#">Columns</a></li>
+      <li><a href="#">Opinie</a></li>
+      <li><a href="#">Podcasts</a></li>
+    </ul>
+  </nav>
+</header>
+<!-- Hero -->
+    <main>
+  <p class="site-tagline">
+    Nieuws · columns · video · podcast over jouw HvA
+  </p>
+
+  <article class="featured-story">
+    <a href="#">
+      <div class="featured-story-content">
+        <p class="category">Column</p>
+
+        <h1>
+          Niemand heeft je ingehaald, maar ineens loop je achter
+        </h1>
+      </div>
+    </a>
+  </article>
+
+  <section class="latest">
+  <nav class="category-nav">
+    <ul>
+      <li><a href="#" class="active">Voor jou</a></li>
+      <li><a href="#">Nieuws</a></li>
+      <li><a href="#">Column</a></li>
+      <li><a href="#">Video</a></li>
+      <li><a href="#">Luister</a></li>
+    </ul>
+  </nav>
+
+  <div class="section-header">
+    <h2>Vandaag op HvanA</h2>
+    <a href="#">Alles</a>
+  </div>
+
+  <article class="story">
+  <a href="#">
+    <div class="story-image">
+      <span>Foto</span>
+    </div>
+
+    <div class="story-content">
+      <p class="story-category">Serie · HvA op Rapport</p>
+
+      <h3>HvA Op Rapport #1: de hogeschool zelf krijgt een cijfer</h3>
+
+      <p class="story-meta">Video · 8 min</p>
+    </div>
+  </a>
+</article>
+</section>
+</main>
+
+
+
+
+
+
+  <script src="/scripts/script.js"></script>
 </body>
 </html>
