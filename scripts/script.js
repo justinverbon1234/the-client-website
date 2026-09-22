@@ -8,9 +8,9 @@ menuToggle.addEventListener('click', () => {
 });
 
 // Expanding search toggle
-const searchForm = document.querySelector('.site-search');
+const searchForm = document.querySelector('.search');
 const searchToggle = document.querySelector('.search-toggle');
-const searchInput = document.querySelector('.site-search-input');
+const searchInput = document.querySelector('.search-input');
 
 if (searchForm && searchToggle && searchInput) {
   const closeSearch = () => {

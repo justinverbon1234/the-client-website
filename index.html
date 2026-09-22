@@ -25,10 +25,10 @@
   </nav>
 
   <div class="header-actions">
-  <form class="site-search" role="search">
+  <form class="search" role="search">
     <input
-      id="site-search-input"
-      class="site-search-input"
+      id="search-input"
+      class="search-input"
       type="search"
       name="q"
       placeholder="Zoeken…"
@@ -39,7 +39,7 @@
       class="search-toggle"
       type="button"
       aria-expanded="false"
-      aria-controls="site-search-input"
+      aria-controls="search-input"
       aria-label="Zoeken"
     >
       <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
@@ -56,28 +56,37 @@
   </button>
 </div>
 </header>
-<!-- Hero -->
-    <main>
+  <main>
   <p class="site-tagline">
     Nieuws · columns · video · podcast over jouw HvA
   </p>
 
-  <article class="featured-story">
-    <a href="#">
-      <div class="featured-story-content">
-        <p class="category">Column</p>
+  <!-- Hero -->
+  <section class="hero">
+    <a href="#" class="hero-link">
+      <img
+        class="hero-image"
+        src="/assets/turkse vrouw.png"
+        alt="Turkse vrouw op een trap."
+        width="1280"
+        height="717"
+      >
+      <div class="hero-content">
+        <span class="chip chip--column">Column</span>
 
-        <h1>
+        <h1 class="hero-title">
           Niemand heeft je ingehaald, maar ineens loop je achter
         </h1>
+
+        <p class="hero-meta">Fadua El Guasti · 5 min lezen</p>
       </div>
     </a>
-  </article>
+  </section>
 
   <section class="latest">
   <nav class="category-nav">
     <ul>
-      <li><a href="#" class="active">Voor jou</a></li>
+      <li><a href="#" class="is-active">Voor jou</a></li>
       <li><a href="#">Nieuws</a></li>
       <li><a href="#">Column</a></li>
       <li><a href="#">Video</a></li>
