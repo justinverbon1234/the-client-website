@@ -58,6 +58,23 @@ input {
   font: inherit;
 }
 
+:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 2px;
+}
+
+.section-heading a:hover,
+.section-heading a:focus-visible,
+.featured-link:hover,
+.featured-link:focus-visible,
+.main-nav a:hover,
+.main-nav a:focus-visible,
+.logo:hover,
+.logo:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
 /* Header */
 .site-header {
   display: flex;
@@ -154,6 +171,12 @@ input {
   gap: 0.5rem;
 
   overflow-x: auto;
+
+  /* overflow clips at the padding box, so the list needs clearance for the
+     3px ring + 2px offset. Negative margins cancel the padding again, so the
+     chips stay in exactly the same place as before. */
+  margin: -0.5rem;
+  padding: 0.5rem;
 }
 
 .topic-filter li {
