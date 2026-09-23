@@ -34,19 +34,19 @@
       </p>
     </section>
 
-    <nav class="topic-filter">
-      <p>Waar wil je over lezen?</p>
+    <section class="topic-filter">
+  <p>Waar wil je over lezen?</p>
 
-      <ul>
-        <li><a href="#" class="active">Alles</a></li>
-        <li><a href="#">Onderwijs</a></li>
-        <li><a href="#">Studenten</a></li>
-        <li><a href="#">Tech</a></li>
-      </ul>
-    </nav>
+  <ul>
+    <li><button class="active" type="button">Alles</button></li>
+    <li><button type="button">Onderwijs</button></li>
+    <li><button type="button">Studenten</button></li>
+    <li><button type="button">Tech</button></li>
+  </ul>
+</section>
+
 <!-- Newest column -->
     <article class="featured-column">
-      <article class="featured-column">
   <p class="featured-meta">
     <span>Nieuwste</span>
     <time datetime="2026-09-23">23 sep</time>
@@ -70,14 +70,86 @@
   <a href="#" class="featured-link">
     Lees de column →
   </a>
+
 </article>
     </article>
 
     <section class="more-columns">
-      <h2>Nieuw & relevant</h2>
+  <div class="section-heading">
+    <h2>Nieuw & relevant</h2>
+    <a href="#">Alles</a>
+  </div>
 
-      <!-- column previews -->
-    </section>
+  <p class="section-intro">
+    Sneller scannen, minder grote blokken.
+  </p>
+
+  <article class="column-card education">
+    <a href="#">
+      <img
+        src="/assets/buiten vrouw.png"
+        alt="Jacob Eikelboom"
+      >
+
+      <div class="column-card-content">
+        <p class="column-category">Onderwijs</p>
+
+        <h3>
+          ‘We laten studenten samenwerken zonder ze ooit te leren hoe je dat doet’
+        </h3>
+
+        <p class="column-meta">
+          Jacob Eikelboom ·
+          <time datetime="2026-09-20">20 sep</time>
+        </p>
+      </div>
+    </a>
+  </article>
+
+  <article class="column-card students">
+    <a href="#">
+      <img
+        src="/assets/man met krullen.png"
+        alt="Naïm Asbâa"
+      >
+
+      <div class="column-card-content">
+        <p class="column-category">Studenten</p>
+
+        <h3>
+          ‘De eerste weken voelen voor niemand zo vanzelfsprekend als ze lijken’
+        </h3>
+
+        <p class="column-meta">
+          Naïm Asbâa ·
+          <time datetime="2026-09-18">18 sep</time>
+        </p>
+      </div>
+    </a>
+  </article>
+
+  <article class="column-card tech">
+    <a href="#">
+      <img
+        src="/assets/gebouw.png"
+        alt="Aynur Can"
+      >
+
+      <div class="column-card-content">
+        <p class="column-category">Tech</p>
+
+        <h3>
+          ‘Nog voordat de les is begonnen, staan de chatbots alweer aan’
+        </h3>
+
+        <p class="column-meta">
+          Aynur Can ·
+          <time datetime="2026-09-15">15 sep</time>
+        </p>
+      </div>
+    </a>
+  </article>
+</section>
 
     <section class="newsletter">
       <!-- newsletter -->
