@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="nl">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Columns | HvanA</title>
+    <title>Columns | HvanA</title>
 
-  <link rel="stylesheet" href="styles/styles.css">
-  <script src="scripts/script.js" defer></script>
-</head>
+    <link rel="stylesheet" href="styles/tokens.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+  </head>
 
 <body>
   <header class="site-header">
     <a href="index.html" class="logo">HvanA</a>
 
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Hoofdnavigatie">
       <ul>
         <li><a href="#">Zoek</a></li>
         <li><a href="#">Menu</a></li>
@@ -24,139 +26,138 @@
   </header>
 
   <main>
-    <section class="columns-intro">
+    <section class="columns-intro" aria-labelledby="page-title">
       <p class="section-label">Columns</p>
 
-      <h1>Persoonlijke stemmen, heldere standpunten.</h1>
+      <h1 id="page-title">Persoonlijke stemmen, heldere standpunten.</h1>
 
       <p>
         Nieuwe columns over studeren, de HvA en alles eromheen.
       </p>
     </section>
 
-    <section class="topic-filter">
-  <p>Waar wil je over lezen?</p>
+    <section class="topic-filter" aria-labelledby="filter-title">
+      <p id="filter-title">Waar wil je over lezen?</p>
 
-  <ul>
-    <li><button class="active" type="button">Alles</button></li>
-    <li><button type="button">Onderwijs</button></li>
-    <li><button type="button">Studenten</button></li>
-    <li><button type="button">Tech</button></li>
-  </ul>
-</section>
+      <ul>
+        <li><button class="active" type="button" aria-pressed="true">Alles</button></li>
+        <li><button type="button" aria-pressed="false">Onderwijs</button></li>
+        <li><button type="button" aria-pressed="false">Studenten</button></li>
+        <li><button type="button" aria-pressed="false">Tech</button></li>
+      </ul>
+    </section>
 
-<!-- Newest column -->
+    <!-- Nieuwste column -->
     <article class="featured-column">
-  <p class="featured-meta">
-    <span>Nieuwste</span>
-    <time datetime="2026-09-23">23 sep</time>
-  </p>
+      <p class="featured-meta">
+        <span>Nieuwste</span>
+        <time datetime="2026-09-23">23 sep</time>
+      </p>
 
-  <img
-    src="assets/turkse vrouw.png"
-    alt="Aynur Can op de HvA-campus"
-  >
-
-  <p class="featured-author">Aynur Can</p>
-
-  <h2>
-    ‘Niemand heeft je ingehaald, maar ineens loop je achter’
-  </h2>
-
-  <p class="featured-intro">
-    Over prestatiedruk en waarom iedereen verder lijkt te zijn dan jij.
-  </p>
-
-  <a href="#" class="featured-link">
-    Lees de column →
-  </a>
-
-</article>
-
-    <section class="more-columns">
-  <div class="section-heading">
-    <h2>Nieuw & relevant</h2>
-    <a href="#">Alles</a>
-  </div>
-
-  <p class="section-intro">
-    Sneller scannen, minder grote blokken.
-  </p>
-
-  <article class="column-card education">
-    <a href="#">
       <img
-        src="assets/buiten vrouw.png"
-        alt="Columniste op de HvA-campus"
+        src="assets/turkse vrouw.png"
+        alt="Aynur Can op de HvA-campus"
       >
 
-      <div class="column-card-content">
-        <p class="column-category">Onderwijs</p>
+      <p class="featured-author">Aynur Can</p>
 
-        <h3>
-          ‘We laten studenten samenwerken zonder ze ooit te leren hoe je dat doet’
-        </h3>
+      <h2>
+        ‘Niemand heeft je ingehaald, maar ineens loop je achter’
+      </h2>
 
-        <p class="column-meta">
-          Jacob Eikelboom ·
-          <time datetime="2026-09-20">20 sep</time>
-        </p>
+      <p class="featured-intro">
+        Over prestatiedruk en waarom iedereen verder lijkt te zijn dan jij.
+      </p>
+
+      <a href="#" class="featured-link">
+        Lees de column →
+      </a>
+    </article>
+
+    <section class="more-columns" aria-labelledby="more-columns-title">
+      <div class="section-heading">
+        <h2 id="more-columns-title">Nieuw & relevant</h2>
+        <a href="#">Alles</a>
       </div>
-    </a>
-  </article>
 
-  <article class="column-card students">
-    <a href="#">
-      <img
-        src="assets/man met krullen.png"
-        alt="Naïm Asbâa in de studieruimte"
-      >
+      <p class="section-intro">
+        Sneller scannen, minder grote blokken.
+      </p>
 
-      <div class="column-card-content">
-        <p class="column-category">Studenten</p>
+      <article class="column-card education">
+        <a href="#">
+          <img
+            src="assets/buiten vrouw.png"
+            alt="Columniste op de HvA-campus"
+          >
 
-        <h3>
-          ‘De eerste weken voelen voor niemand zo vanzelfsprekend als ze lijken’
-        </h3>
+          <div class="column-card-content">
+            <p class="column-category">Onderwijs</p>
 
-        <p class="column-meta">
-          Naïm Asbâa ·
-          <time datetime="2026-09-18">18 sep</time>
-        </p>
-      </div>
-    </a>
-  </article>
+            <h3>
+              ‘We laten studenten samenwerken zonder ze ooit te leren hoe je dat doet’
+            </h3>
 
-  <article class="column-card tech">
-    <a href="#">
-      <img
-        src="assets/gebouw.png"
-        alt="HvA-gebouw in de steigers"
-      >
+            <p class="column-meta">
+              Jacob Eikelboom ·
+              <time datetime="2026-09-20">20 sep</time>
+            </p>
+          </div>
+        </a>
+      </article>
 
-      <div class="column-card-content">
-        <p class="column-category">Tech</p>
+      <article class="column-card students">
+        <a href="#">
+          <img
+            src="assets/man met krullen.png"
+            alt="Naïm Asbâa in de studieruimte"
+          >
 
-        <h3>
-          ‘Nog voordat de les is begonnen, staan de chatbots alweer aan’
-        </h3>
+          <div class="column-card-content">
+            <p class="column-category">Studenten</p>
 
-        <p class="column-meta">
-          Aynur Can ·
-          <time datetime="2026-09-15">15 sep</time>
-        </p>
-      </div>
-    </a>
-  </article>
-</section>
+            <h3>
+              ‘De eerste weken voelen voor niemand zo vanzelfsprekend als ze lijken’
+            </h3>
 
-    <section class="newsletter">
-      <!-- newsletter -->
+            <p class="column-meta">
+              Naïm Asbâa ·
+              <time datetime="2026-09-18">18 sep</time>
+            </p>
+          </div>
+        </a>
+      </article>
+
+      <article class="column-card tech">
+        <a href="#">
+          <img
+            src="assets/gebouw.png"
+            alt="HvA-gebouw in de steigers"
+          >
+
+          <div class="column-card-content">
+            <p class="column-category">Tech</p>
+
+            <h3>
+              ‘Nog voordat de les is begonnen, staan de chatbots alweer aan’
+            </h3>
+
+            <p class="column-meta">
+              Aynur Can ·
+              <time datetime="2026-09-15">15 sep</time>
+            </p>
+          </div>
+        </a>
+      </article>
+    </section>
+
+    <section class="newsletter" aria-label="Nieuwsbrief">
+      <!-- Newsletter -->
     </section>
   </main>
 
   <footer class="site-footer">
-    <!-- footer -->
+    <!-- Footer -->
   </footer>
 </body>
 

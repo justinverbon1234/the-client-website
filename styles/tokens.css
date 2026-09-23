@@ -1,0 +1,16 @@
+:root {
+  --blue: #0851d8;
+  --yellow: #fed204;
+  --pink: #ff88c0;
+  --orange: #ff5e31;
+  --mint: #31dcb4;
+
+  --black: #000000;
+  --white: #ffffff;
+  --off-white: #f7f6f2;
+
+  --gray: #666661;
+  --light-gray: #e8e7e2;
+
+  --page-padding: 1.5rem;
+}
