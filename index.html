@@ -20,12 +20,42 @@
   <header class="site-header">
     <a href="index.html" class="logo">HvanA</a>
 
-    <nav class="main-nav">
+    <nav class="main-nav" id="main-menu">
       <ul>
-        <li><a href="#">Zoek</a></li>
-        <li><a href="#">Menu</a></li>
+        <li><a href="#">Nieuws</a></li>
+        <li><a href="#">Video</a></li>
+        <li><a href="#">Columns</a></li>
+        <li><a href="#">Opinie</a></li>
+        <li><a href="#">Podcast</a></li>
       </ul>
     </nav>
+
+    <div class="header-actions">
+      <button class="search-toggle" type="button" aria-expanded="false" aria-controls="site-search">
+        <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false">
+          <circle cx="11" cy="11" r="7" />
+          <path d="m20 20-3.5-3.5" />
+        </svg>
+        <span class="visually-hidden">Zoek</span>
+      </button>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">
+        <svg class="icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false">
+          <path class="menu-line menu-line-top" d="M4 7h16" />
+          <path class="menu-line menu-line-mid" d="M4 12h16" />
+          <path class="menu-line menu-line-bottom" d="M4 17h16" />
+        </svg>
+        <span class="visually-hidden">Menu</span>
+      </button>
+    </div>
+
+    <search class="site-search" id="site-search">
+      <form>
+        <label class="visually-hidden" for="search-input">Zoek in HvanA</label>
+        <input id="search-input" type="search" name="q" placeholder="Zoek in HvanA">
+        <button type="submit">Zoek</button>
+      </form>
+    </search>
   </header>
 
   <main>
