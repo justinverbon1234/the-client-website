@@ -4,15 +4,181 @@
   line-height: 1;
 }
 
+.header-actions {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.header-actions button {
+  display: grid;
+  place-items: center;
+
+  width: 2.75rem;
+  height: 2.75rem;
+
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+
+  background: none;
+
+  color: inherit;
+  cursor: pointer;
+}
+
+.header-actions button:hover {
+  background-color: var(--off-white);
+}
+
+.main-nav {
+  display: none;
+
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  left: 0;
+  right: 0;
+
+  padding: 0.5rem var(--page-padding) 1rem;
+
+  background-color: var(--white);
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.site-header.is-menu-open .main-nav {
+  display: block;
+
+  animation: panel-drop 0.2s ease-out;
+}
+
 .main-nav ul {
   display: flex;
-  gap: 1.25rem;
+  flex-direction: column;
+}
+
+.main-nav li + li {
+  border-top: 1px solid var(--light-gray);
 }
 
 .main-nav a {
+  display: block;
+
+  padding: 0.75rem 0;
+
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.site-search {
+  display: none;
+
+  position: absolute;
+  z-index: 10;
+  top: 100%;
+  left: 0;
+  right: 0;
+
+  padding: 0.75rem var(--page-padding) 1rem;
+
+  background-color: var(--white);
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.site-header.is-search-open .site-search {
+  display: block;
+
+  animation: panel-drop 0.2s ease-out;
+}
+
+.site-search form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.site-search input {
+  flex: 1;
+  min-width: 0;
+
+  padding: 0.625rem 1rem;
+
+  border: 1px solid var(--light-gray);
+  border-radius: 2rem;
+
+  font: inherit;
+  font-size: 0.875rem;
+}
+
+.site-search button[type="submit"] {
+  padding: 0.625rem 1.25rem;
+
+  border: 0;
+  border-radius: 2rem;
+
+  background-color: var(--black);
+  color: var(--white);
+
+  font: inherit;
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.menu-line {
+  transform-box: fill-box;
+  transform-origin: center;
+
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.site-header.is-menu-open .menu-line-top {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.site-header.is-menu-open .menu-line-mid {
+  opacity: 0;
+}
+
+.site-header.is-menu-open .menu-line-bottom {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+@keyframes panel-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    position: static;
+
+    display: block;
+    padding: 0;
+    border-bottom: 0;
+  }
+
+  .main-nav ul {
+    flex-direction: row;
+    gap: 1.25rem;
+  }
+
+  .main-nav li + li {
+    border-top: 0;
+  }
+
+  .main-nav a {
+    padding: 0;
+
+    font-size: 0.75rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
 }
 
 .section-label {
